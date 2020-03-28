@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="manager:war exploded">
+    <output-path>$PROJECT_DIR$/manager/target/manager</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>manager</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="manager" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="parent-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="parent" />
+          </element>
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.58" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/manager/target/manager/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="manager/web/Web" />
+    </root>
+  </artifact>
+</component>
