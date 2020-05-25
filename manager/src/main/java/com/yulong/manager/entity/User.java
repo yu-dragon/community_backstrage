@@ -1,8 +1,12 @@
 package com.yulong.manager.entity;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class User {
     private Integer id;
-    private String username;
+    private String name;
+    private String nick_name;
     private String password;
     private String card_id;
     private String phone;
@@ -11,7 +15,43 @@ public class User {
     private String img_head;
     private String address;
     private Integer type;
+    private Integer status;
     private Integer health_status;
+    private Timestamp register_time;
+    private String extend;
+
+
+    public String getExtend() {
+        return extend;
+    }
+
+    public void setExtend(String extend) {
+        this.extend = extend;
+    }
+
+    public Timestamp getRegister_time() {
+        return register_time;
+    }
+
+    public void setRegister_time(Timestamp register_time) {
+        this.register_time = register_time;
+    }
+
+    public String getNick_name() {
+        return nick_name;
+    }
+
+    public void setNick_name(String nick_name) {
+        this.nick_name = nick_name;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;
@@ -21,12 +61,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -105,7 +145,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", nick_name='" + nick_name + '\'' +
                 ", password='" + password + '\'' +
                 ", card_id='" + card_id + '\'' +
                 ", phone='" + phone + '\'' +
@@ -114,7 +155,10 @@ public class User {
                 ", img_head='" + img_head + '\'' +
                 ", address='" + address + '\'' +
                 ", type=" + type +
+                ", status=" + status +
                 ", health_status=" + health_status +
+                ", register_time=" + register_time +
+                ", extend='" + extend + '\'' +
                 '}';
     }
 }

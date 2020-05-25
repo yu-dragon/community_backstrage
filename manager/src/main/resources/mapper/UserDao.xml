@@ -4,8 +4,8 @@
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.yulong.manager.dao.UserDao">
 
-    <select id="getUser" resultType="User" parameterType="Integer">
-        select * from  user where id = #{id}
-    </select>
+<!--    <select id="getUser" resultType="User" parameterType="String">-->
+<!--        select * from  user where card_id = #{cardId} and password = #{password}-->
+<!--    </select>-->
 
 </mapper>

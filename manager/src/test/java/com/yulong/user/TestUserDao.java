@@ -20,9 +20,7 @@ public class TestUserDao {
 
     @Test
     public void testGetUser() {
-        Integer id = 1;
-        List<User> user = userService.getUser(id);
-        System.out.println(user);
+
     }
 
 }

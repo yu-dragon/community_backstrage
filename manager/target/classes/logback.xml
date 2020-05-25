@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration debug="true">
+<!--debug开启就可以在控制台打印logback的内部状态信息.
+    scan属性开始时默认每分钟扫描一次配置文件，防止配置文件变化项目没有感知,
+    也可以直接设置时间,scanPeriod,单位自己定义-->
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+<!--    下面一行配置和上面设施debug为true作用一样-->
+<!--    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} - %-4relative - [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
     <root level="debug">
